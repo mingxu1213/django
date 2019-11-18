@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+	<title>Dorabot App</title>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+	    	<h1 class="display-6">Welcome to Dorabot!</h1>
+			<hr class="my-4">
+			<p>This application is designed to help customer determine optimaised loading plans of inventory into enclosures.</p>
+			<a class="btn btn-primary btn-sm" 
+				href="https://dorabot.com/" 
+				role="button">
+				Learn more about Dorabot
+			</a>
+	    </div>
+		{% block content %}
+	    {% endblock %}   
+	</div> 
+</body>
+</html>

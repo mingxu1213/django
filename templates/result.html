@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table table-bordered">
+	<thead class="thead-dark">
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Utilisation (%)</th>
+			<th scope="col">Order</th>
+			<th scope="col">Volume (m3)</th>
+			<th scope="col">Weight (kg)</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for each_plan in plans %}
+			<tr>
+				<th scope="row">{{ forloop.counter }}</th>
+				<th scope="row">{{ utilisation }}</th>
+					{% for each_param in each_plan %}
+						<td>{{ each_param }}</td>
+					{% endfor %}
+				</tr>
+		{% endfor %}
+	</tbody>
+</table>
+<a href="http://127.0.0.1:8000">
+	<button class="btn btn-primary" >Go Back</button>
+</a>
+{% endblock %}
